@@ -1,0 +1,69 @@
+Javascript Iterators
+
+1. function printEmails(people) {
+	people.forEach(user){
+		console.log(user.email);
+	});
+}
+2. function printHobbies (people) {
+	people.forEach(function)
+}
+
+
+3. function findHometownByState(state){
+    return users.find(function(val){
+        return val.hometown.state === state;
+    });
+}
+
+4. function allLanguages(){
+    var languages = [];
+    users.forEach(function(user){
+        user.favorite_languages.forEach(function(language){
+            if(languages.indexOf(language) === -1){
+                languages.push(language);
+            }
+        });
+    });
+    return languages;
+}
+
+5. function hasFavoriteEditor(person){
+    return users.some(function(user){
+        return user.favoriteEditor === person;
+    });
+}
+
+6.function findByUsername(username){
+    return users.find(function(user){
+        return user.username === username;
+    });
+}
+}
+
+
+Part 2
+
+1. function vowelCount(str){
+    var arr = str.split("");
+    var obj = {};
+    var vowels = ["a","e","i","o","u"];
+
+    arr.forEach(function(letter){
+        if(vowels.indexOf(letter.toLowerCase()) !== -1){
+            if(obj[letter]){
+                obj[letter]++;
+            } else{
+                obj[letter] = 1;
+            }
+        }
+    });
+    return obj;
+}
+
+2. function removeVowels(str){
+    var vowels = ["a","e","i","o","u"]
+    return str.split("").filter(function(val){
+        return vowels.indexOf(val) === -1;
+    });
+}

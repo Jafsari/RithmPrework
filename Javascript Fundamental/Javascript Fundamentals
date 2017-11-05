@@ -1,0 +1,180 @@
+Javascript Fundamentals
+
+Boolean Logic 
+
+Part 1
+1. true
+2. true
+3. 1
+4. true
+5. false
+6. true
+7. true
+
+Part 2
+1. "Keep it up!" because the value is truthy.
+2. We don't because true is a truthy value
+
+1.'third', because the thirdVariable is a truthy value
+2. The value of firstVariable is undefined. It's initialized when the variable was created.
+3. No, because it's undefined.
+4. No because is an empty string
+5. Yes, because it is equal to 1.
+
+Part 3
+1. if (Math.random > 0.5) {
+	console.log('over 0.5')
+} else {
+	console.log('under .5')
+}
+2. A falsey vaue is a value that will output false when it's inside of a conditional statement. The  falsey values are 0,false,undefined,NaN,'',null
+
+
+
+
+Array Exercises
+
+1. for(var i = 0; i < people.length ; i ++) {
+	console.log(people[i])
+}
+2. people.shift()
+3. people.pop()
+4. people.unshift('Matt')
+5. people.push('Justin')
+6. for(var i = 0; i < people.length ; i ++) {
+	if (i > 1) {
+	break;
+	}
+	console.log(people[i])
+}
+7. people.slice(2)
+8. people.indexOf('Mary')
+9. people.indexOf('foo')
+10. people.splice(2,1,'Elizabeth','Artie');
+11. var withBob = people.concat('Bob')
+
+
+Object Exercises
+1. programming.languages.push('Go')
+2. programming.difficulty = 7;
+3. delete programming.jokes
+4. programming.isFun = true;
+5. var arr = programming.languages
+for (var i = 0; i <arr.length ; i ++) {
+	console.log(arr[i])
+}
+6. for(var key in programming){
+	console.log(keys)
+}
+7. for(var key in programming) {
+	cosole.log(programming[key])
+}
+
+
+Function Exercises
+
+Part 1
+
+1. function difference (a,b) {
+	return a -b
+}
+
+2. function product (a,b) {
+	return a * b
+}
+3. function printDay(num) {
+	var obj = {}
+	obj.monday = 1
+	obj.tuesday = 2
+	obj.wednesday = 3
+	obj.thursday = 4
+	obj.friday = 5
+	obj.saturday = 6
+	obj.sunday = 7
+
+	return obj[num]
+	}
+4. function lastElement (arr){
+	return arr[arr.length-1]
+}
+5. function numberCompare (a,b) {
+	if (a > b) {
+	return 'First is greater'
+	}
+	if (a < b) {
+	return 'Second is greater'
+	}
+	if (a === b) {
+	return 'Numbers are Equal'
+	}
+}
+
+6. function singleLetterCount (str,char) {
+	var count = 0;
+	for(var i = 0; i < str.length. i ++) {
+		if (str[i].toLowerCase() === char.toLowerCase()) {
+		count++
+		}
+	}
+	return count;
+}
+
+7. function multipleLetterCount (str){
+	var obj = {}
+	for(var i = 0; i < str.length ; i ++) {
+	if (str[i] in obj) {
+	obj[str[i]] ++
+	}else {
+	obj[str[i]] = 1;
+	}
+	return obj
+	}
+}
+
+8. function arrayManipulation(arr, command, position, val){
+  if(command === 'remove'){
+    if(position === 'end'){
+      return arr.pop();
+    }
+      return arr.shift();
+  }
+  else if(command === 'add'){
+    if(position === 'end'){
+      arr.push(val)
+      return arr;
+    }
+    arr.unshift(val)
+    return arr;
+  }
+}
+
+9. function isPalindrome(str){
+  return str.toLowerCase().split('').reverse().join('') === str.toLowerCase();
+  }
+
+  10. function RockPaperScissor(){
+
+  function determineComputer(num){
+    if(num <= .33) return "rock";
+    else if(num <= .66) return "paper";
+    return "scissor";
+  }
+
+  var userChoice = prompt("Choose rock / paper or scissor").toLowerCase();
+  var computerChoice = determineComputer(Math.random());
+
+
+  var answers = ["rock", "paper", "scissor"];
+
+  if(!userChoice || answers.indexOf(userChoice) === -1){
+    return "Please select a valid option";
+  }
+
+  if(userChoice === computerChoice) return "Tie!";
+
+  if(userChoice === "rock" && computerChoice === "paper") return "You lose, computer picked " +  computerChoice;
+  if(userChoice === "paper" && computerChoice === "scissor") return "You lose, computer picked " +  computerChoice;
+  if(userChoice === "scissor" && computerChoice === "rock") return "You lose, computer picked " +  computerChoice;
+
+  return "You win! Computer picked " +  computerChoice;
+}

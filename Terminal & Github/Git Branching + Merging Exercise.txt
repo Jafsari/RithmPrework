@@ -1,0 +1,22 @@
+Git Branching + Merging Exercise
+Part 1
+
+1. Git clean will remove files that aren't in the staging area.
+
+2. The -d and -f flags remove untracked directories in addition to untracked files.
+
+3. git checkout-b creates a branch.
+
+4. The difference is that fast forwards can only happen if there haven't been any commits to the original branch.
+
+5. git checkout changes to another branch.
+
+6. git checkout will remove modified or deleted files.
+
+7. git Branch -D will remove a branch.
+
+8. The git diff command will show you a difference between two different commits.
+
+9. TO remove files from the staging area you have to use git reset HEAD 
+
+10. Merge conflicts happen when git can't determine what file or folder to choose when there are two different commits to the same file. 

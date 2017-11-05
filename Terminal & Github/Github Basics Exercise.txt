@@ -1,0 +1,10 @@
+Github Basics Exercise
+
+Part 1.
+
+
+1. mkdir burrito, cd burrito, touch taco.txt, git init, git add, git commit -m 'first commit'
+
+2. git remote add Origin (url)
+- git push -u origin master
+

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS Clock</title>
+	<link rel="stylesheet" type="text/css" href="clock-style.css">
+	<style>
+		.clock {
+	width: 500px;
+	height: 500px;
+	border: 4px black;
+	background-color: lightblue;
+	border-radius: 50%;
+	color: black;
+}
+
+.seconds {
+	width: 3px;
+	height: 250px;
+	background-color: white;
+	margin-left: 250px;
+	animation: timelapse 60s infinite linear;
+	position: absolute;
+}
+
+.minutes {
+	width: 7px;
+	height: 200px;
+	background-color: black;
+	margin-left: 250px;
+	margin-top: 50px;
+	animation: timelapse 3600s infinite linear;
+	position: absolute;
+}
+
+.hours {
+	width: 5px;
+	height: 150px;
+	background-color: black;
+	margin-left: 250px;
+	margin-top: 100px;
+	animation: timelapse 43200s infinite linear;
+	position: absolute;
+}
+
+@keyframes timelapse {
+	0% {
+		transform: rotate(0);
+		transform-origin: center bottom;
+	}
+
+	100% {
+		transform: rotate(360deg);
+		transform-origin: center bottom;
+	}
+}
+	</style>
+</head>
+<body>
+	<div class="clock">
+		<div class="seconds"></div>
+		<div class="minutes"></div>
+		<div class="hours"></div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+Dom Exercises
+
+1. var section = document.getElementsById('container')
+2. var section2 = document.querySelectorAll('#container')
+3. var all = document.querySelectorAll('.second')
+4. var third = document.querySelector('ol.third')
+5. var section = document.querySelector('#container')
+section.innterText = 'Hello';
+6. var div = document.querySelector('.footer');
+footer.classList.add('main')
+7.var footer = document.querySelector(".footer");
+footer.classList.remove("main");
+8.var newLi = document.createElement("li")
+9. newLi.innerText = "four"
+10.var list = document.querySelector("ul");
+list.appendChild(newLi);
+11.var liInsideOl = document.querySelectorAll("ol li");
+for(var i = 0; i < liInsideOl.length; i++){
+    liInsideOl[i].style.backgroundColor = "green";
+}
+12.var footer = document.querySelector(".footer");
+footer.remove();

@@ -1,0 +1,112 @@
+Event Exercises
+Part 1
+1.  document.addEventListener("DOMContentLoaded", function(){
+});
+2. var h1 = document.querySelector('#change_heading')
+h1.innerText = 'Hello World'
+
+3.var section = document.querySelector('section') 
+section.addEventlistenener('mouseover',function(hover){
+	var Color = document.querySelector('.selected');
+	ColorinnerText = hover.target.className
+})
+
+4. var div = document.createElement('div');
+
+
+5. var div = document.querySelector('div')
+div.style.backgroundColor = purple;
+
+
+6. section.appendChild(div)
+
+
+
+Part 2
+var first = document.querySelector('button')
+var firstCar = document.querySelector('.car1');
+var secondCar = document.querySelector('.car2');
+
+firstCar.style.marginLeft = 0;
+secondCar.style.marginLeft = 0;
+
+function reset(firstCar,secondCar){
+	clearTimeout(firstCar.timer);
+	cleatTimeout(secondCar.timer);
+	firstCar.style.marginLeft = 0;
+	secondCar.style.marginLeft = 0;
+	first.false;
+	}
+
+	first.addEventListener('click',function(prop)){
+	first.disabled = true;
+	firstCar.timer = setInterval(function(){
+	firstCar.style.marginLeft = parseInt(car1.style.marginLeft) + Math.random() * 60 + 'px';
+	if (parseInt(firstCar.style.marginLeft) > window.innerWidth){
+	alert('firstCar wins!');
+	reset(firstCar,secondCar)
+	}
+	},60)
+
+	secondCar.timer = setInterval(function()){
+	secondCar.style.marginLeft = parseInt(secondCar.style.marginLeft) + Math.random() * 60 + 'px'
+	if (parseInt(secondCar.style.marginleft) > window.innerWidth) {
+	alert('secondCar Wins');
+	reset(firstCar,secondCar);
+
+	}
+	},60)
+	})
+	}
+
+
+
+
+	Part 3
+	In other Folder
+
+
+
+
+	Part 4
+
+var list = document.getElementById("to-do-list");
+	list.addEventListener("click", function(event){
+		if (event.target.tagName.toLowerCase() === "li") {
+			event.target.style.textDecoration = "line-through";
+
+			// update in items array that item is completed
+			var itemID = event.target.id;
+			items.forEach(function(item){
+				if (item.id === itemID) {
+					item.completed = true;
+				}
+			});
+			localStorage.setItem("items", JSON.stringify(items));
+			console.log(items);
+		} else if (event.target.classList.contains("deleteButton")) {
+			event.target.parentNode.remove();
+
+			// remove item completely from items array
+			var itemID = event.target.ID;
+			var itemIndex = items.find(function(item){
+				return item.id === itemID;
+			});
+			items.splice(itemIndex, 1);
+			localStorage.setItem("items", JSON.stringify(items));
+			console.log(items);
+		}
+	});
+
+	// store array of item objects into localStorage
+	localStorage.setItem("items", JSON.stringify(items));
+
+});
+
+function createButton(item) {
+	// give item a delete button
+	var destroyB = document.createElement("button");
+	destroyB.setAttribute("class", "deleteButton");
+	destroyB.innerText = "X";
+	item.appendChild(deleteButton);
+}

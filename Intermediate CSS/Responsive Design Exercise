@@ -1,0 +1,9 @@
+Responsive Design Exercise
+
+1. An em is the default font size of an element which will allow you to defin font sizes relative to toher font sizes within a parent element.
+
+2. An em is defined by the font size of the parent, while a rem is relative to the root element.
+
+3. Mobile first desgin means designing a web page based on the small mobile site first and then you should expanding out to a desktop sized site afterwards.
+
+4. BEM stands for block, element, and modifier. Blocks are entities which have meaning on their won. While Elements are part of blocks that are semantically tied to blocks and modifiers are 'flags on blocks or elements which signify state changes.

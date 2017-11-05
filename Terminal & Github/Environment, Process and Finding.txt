@@ -1,0 +1,29 @@
+Environment, Process and Finding
+
+Part 1 
+1. export FIRST_NAME=/Users/justinafsari/Projects
+2. echo $FIRST_NAME
+3. echo $PATH
+4. The path variable is used to find programs to execute.
+5. You would want to create an environmental varaible because it secures information and allows the user to use the variable a numberous amount of times.
+6. Save the variable inside the shell.
+7. A process is a specified program that is in use.
+8. ps aux
+9. The PID column is a number that uniquely identifies the process.
+10. kill + PID
+11. The -9 flag sends a different signal to the process. In other words, the kill-9 command will terminate a process if is non reachable.
+12. 'i'
+13. 'B'
+14. 'C'
+15. 'A'
+16. 'w'
+17. 'n'
+
+Part 2
+1. find ~/Desktop -name "learn"
+2. find ~/Desktop -name "P.*"
+3. find ~/Desktop -name "*.txt"
+4. find ~/Desktop/views -name "*data*"
+5. grep -c "Elie" instructors.txt
+6. grep -w "P.*" instructors.txt
+7. grep -ni "z.*" instructors.txt

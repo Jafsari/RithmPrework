@@ -1,0 +1,30 @@
+Terminal Basics.
+
+Part 1
+
+1. mkdir first
+2. cd first
+3. touch person.txt
+4. person.txt -> a
+5. cp another.txt copy.txt
+6. rm copy.txt
+7. cp-r first second
+8. rmdir second
+
+Part 2
+
+1. The man command is used to look at the manual and see what a specific command would do. It also shows which flags are associated with certian commands. To scroll out you can use the arrow keys and pressing q to quit the manual.
+
+2. The -l flag gives you a long output for the ls command, which will allow you to see the file sizes with their lists.
+
+6. Option + arrow keys.
+7. Ctrl + E
+8. Ctrl + A
+9.Ctrl + W
+10. The shell is an interpreter, which allows the user to understand the processed commands, while the terminal is the environment where you input text and get an output.
+
+11. The absolute path is how to reach a file or folder from the root directory.
+
+12. The relative path is relative to where you are currently at.
+13.Flags can change and even enhance commands. I've used -r, -rf, -a
+14. The r will remove folders and go through each folder while the f is force removal.
